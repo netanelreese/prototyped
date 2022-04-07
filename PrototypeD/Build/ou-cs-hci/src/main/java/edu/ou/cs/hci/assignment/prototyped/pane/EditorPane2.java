@@ -510,15 +510,17 @@ public final class EditorPane2 extends AbstractPane
 
 		// Example 1: Create and position a Label for the cTitle TextField
 		Label	lTitle = new Label("Title");
+		Label	lRating = new Label("Rating");
+		Label	lAwards = new Label("Award(s)");
+		Label	lReviews = new Label("Number of Reviews:");
+		Label	lDirector = new Label("Director:");
+		Label	lAge = new Label("Rating:");
+		Label	lYear = new Label("Year:");
+		Label	lGenre = new Label("Genre:");
+		Label	lComments = new Label("Comments:");
+		Label	lSummary = new Label("Summary:");
+		Label	lRuntime = new Label("Runtime:");
 		
-		VBox	hTitle = buildLabeledVBox("Title", cTitle);
-		VBox	hYear = buildLabeledVBox("Year", cYear);
-		VBox	hRating = buildLabeledVBox("Rating", cRating);
-		VBox	hRuntime = buildLabeledVBox("Runtime", cRuntime);
-		VBox	hDirector = buildLabeledVBox("Director", cDirector);
-		VBox	hAvg = buildLabeledVBox("Average Score", cAverageReviewScore);
-		VBox	hNum = buildLabeledVBox("Number of Reviews", cNumberOfReviews);
-
 		// Layout of summary+isAnimated+isColor is somewhat complicated
 		Label		label = new Label("Summary");
 		FlowPane	flow = new FlowPane(Orientation.HORIZONTAL, 0.0, 0.0,
@@ -563,6 +565,21 @@ public final class EditorPane2 extends AbstractPane
 		pimage.setBorder(BORDER);
 		poster.setPadding(PADDING);
 		
+		//grouping of rating, awards, number of reviews
+		lRating.relocate(30, 10);
+
+		//grouping of director, animated, color, rating and year
+
+
+		//Genre Grouping
+		
+
+		//Grouping of comments and summary
+
+
+		//Runtime grouping
+
+
 		poster.relocate(0, 350);
 		
 		// Add all of the widgets, labels, decoration nodes, etc. to the pane
