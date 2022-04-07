@@ -567,13 +567,16 @@ public final class EditorPane2 extends AbstractPane
 		
 		//grouping of rating, awards, number of reviews
 		lRating.relocate(30, 10);
+
 		lAwards.relocate(30, 50);
 		lReviews.relocate(30, 200);
 
 		//grouping of director, animated, color, rating and year
 		lDirector.relocate(40, 10);
+		cDirector.relocate(40, 30);
 		lAge.relocate(40, 50);
 		lYear.relocate(40, 100);
+		cYear.relocate(40, 120);
 
 		//Genre Grouping
 		lGenre.relocate(50, 100);
