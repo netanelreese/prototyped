@@ -522,30 +522,6 @@ public final class EditorPane2 extends AbstractPane
 		Label	lRuntime = new Label("Runtime:");
 		
 		// Layout of summary+isAnimated+isColor is somewhat complicated
-		Label		label = new Label("Summary");
-		FlowPane	flow = new FlowPane(Orientation.HORIZONTAL, 0.0, 0.0,
-										cIsAnimated, cIsColor);
-		VBox		hSummary = new VBox(new HBox(label, flow), cSummary);
-
-		flow.setAlignment(Pos.CENTER_RIGHT);
-		label.setFont(FONT_LABEL);
-		label.setMinSize(60, 0);
-		hSummary.setPadding(PADDING);
-
-		VBox	hComments = buildLabeledVBox("Comments", cComments);
-		VBox	pfield = new VBox(hTitle, hDirector, hSummary);
-		VBox	paward = buildLabeledVBox("Awards", new VBox(cAwardPicture,
-					cAwardDirecting, cAwardCinematography, cAwardActing));
-		VBox	paar = new VBox(paward, hAvg, hNum);
-		VBox	pg = buildLabeledVBox("Genres",
-					new VBox(cGenres.toArray(new CheckBox[cGenres.size()])));
-
-		HBox		paarg = new HBox(paar, pg);
-		HBox		pyrr = new HBox(hYear, hRating, hRuntime);
-		BorderPane	ppicks = new BorderPane(paarg, pyrr, null, null, null);
-		BorderPane	pbunch = new BorderPane(pfield, null, ppicks, null, null);
-		VBox		pentry = new VBox(pbunch, hComments);
-
 		lTitle.setFont(FONT_LABEL);
 		lTitle.relocate(20, 430);
 
@@ -560,33 +536,46 @@ public final class EditorPane2 extends AbstractPane
 		HBox		pipick = new HBox(hImageFile, hImageButton);
 		BorderPane	pimage = new BorderPane(cImageView);
 		BorderPane	poster = new BorderPane(pimage, null, null, pipick, null);
+		poster.setMaxWidth(270);
 		//hImageFile.setPadding(new Insets(4.0, 2.0, 0.0, 0.0));
 		//hImageButton.setPadding(new Insets(4.0, 0.0, 0.0, 2.0));
 		pimage.setBorder(BORDER);
-		poster.setPadding(PADDING);
+		//poster.setPadding(PADDING);
 		
 		//grouping of rating, awards, number of reviews
-		lRating.relocate(30, 10);
-
-		lAwards.relocate(30, 50);
-		lReviews.relocate(30, 200);
+		lRating.relocate(300, 10);
+		cRating.relocate(300, 30);
+		lAwards.relocate(300, 50);
+		lReviews.relocate(300, 200);
 
 		//grouping of director, animated, color, rating and year
-		lDirector.relocate(40, 10);
-		cDirector.relocate(40, 30);
-		lAge.relocate(40, 50);
-		lYear.relocate(40, 100);
-		cYear.relocate(40, 120);
+		lDirector.relocate(500, 10);
+		cDirector.relocate(500, 30);
+		cDirector.setMaxWidth(150);
+		lAge.relocate(500, 100);
+		lYear.relocate(500, 200);
+		cYear.relocate(500, 220);
 
 		//Genre Grouping
-		lGenre.relocate(50, 100);
+		lGenre.relocate(650, 100);
+		System.out.println(cGenres.size());
+		cGenres.get(0).relocate(650, 120);
+		cGenres.get(1).relocate(650, 150);
+		cGenres.get(2).relocate(650, 180);
+		cGenres.get(3).relocate(650, 210);
+		cGenres.get(4).relocate(650, 240);
+		cGenres.get(5).relocate(650, 270);
+		cGenres.get(6).relocate(650, 300);
+		cGenres.get(7).relocate(650, 330);
+		cGenres.get(8).relocate(650, 360);
+		cGenres.get(9).relocate(650, 390);
 
 		//Grouping of comments and summary
-		lComments.relocate(70, 10);
-		lSummary.relocate(70, 100);
+		lComments.relocate(800, 10);
+		lSummary.relocate(800, 250);
 
 		//Runtime grouping
-		lRuntime.relocate(30, 250);
+		lRuntime.relocate(400, 350);
 
 
 		//Poster relocate
@@ -594,9 +583,10 @@ public final class EditorPane2 extends AbstractPane
 		
 		// Add all of the widgets, labels, decoration nodes, etc. to the pane
 		pane.getChildren().addAll(lTitle, cTitle, poster);
-		pane.getChildren().addAll(lRating, lAwards, lReview);//rating award review group
-		pane.getChildren().addAll(lDirector, lAge, lYear); //director, age rating, year groupnig
+		pane.getChildren().addAll(lRating, lAwards, lReviews);//rating award review group
+		pane.getChildren().addAll(lDirector, lAge, lYear, cYear, cDirector); //director, age rating, year groupnig
 		pane.getChildren().addAll(lGenre); //genre grouping
+		pane.getChildren().addAll(cGenres);
 		pane.getChildren().addAll(lComments, lSummary); //comments and summary grouping
 		pane.getChildren().addAll(lRuntime); //runtime grouping
 
