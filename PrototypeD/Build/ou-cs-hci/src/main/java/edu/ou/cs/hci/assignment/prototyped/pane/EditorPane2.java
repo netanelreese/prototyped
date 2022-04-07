@@ -567,23 +567,35 @@ public final class EditorPane2 extends AbstractPane
 		
 		//grouping of rating, awards, number of reviews
 		lRating.relocate(30, 10);
+		lAwards.relocate(30, 50);
+		lReviews.relocate(30, 200);
 
 		//grouping of director, animated, color, rating and year
-
+		lDirector.relocate(40, 10);
+		lAge.relocate(40, 50);
+		lYear.relocate(40, 100);
 
 		//Genre Grouping
-		
+		lGenre.relocate(50, 100);
 
 		//Grouping of comments and summary
-
+		lComments.relocate(70, 10);
+		lSummary.relocate(70, 100);
 
 		//Runtime grouping
+		lRuntime.relocate(30, 250);
 
 
+		//Poster relocate
 		poster.relocate(0, 350);
 		
 		// Add all of the widgets, labels, decoration nodes, etc. to the pane
 		pane.getChildren().addAll(lTitle, cTitle, poster);
+		pane.getChildren().addAll(lRating, lAwards, lReview);//rating award review group
+		pane.getChildren().addAll(lDirector, lAge, lYear); //director, age rating, year groupnig
+		pane.getChildren().addAll(lGenre); //genre grouping
+		pane.getChildren().addAll(lComments, lSummary); //comments and summary grouping
+		pane.getChildren().addAll(lRuntime); //runtime grouping
 
 		// Return the parent pane as the "root" of the EditorPane2 layout
 		return pane;
