@@ -573,7 +573,6 @@ public final class EditorPane2 extends AbstractPane
 
 		//Genre Grouping
 		lGenre.relocate(650, 100);
-		System.out.println(cGenres.size());
 		cGenres.get(0).relocate(650, 120);
 		cGenres.get(1).relocate(650, 150);
 		cGenres.get(2).relocate(650, 180);
@@ -598,7 +597,7 @@ public final class EditorPane2 extends AbstractPane
 		//Runtime grouping
 		lRuntime.relocate(400, 350);
 		cRuntime.relocate(400, 370);
-
+		cRuntime.setPrefWidth(100);
 		
 		// Add all of the widgets, labels, decoration nodes, etc. to the pane
 		pane.getChildren().addAll(lTitle, cTitle, cImageView, cImageButton, cImageFile);
