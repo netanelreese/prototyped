@@ -487,7 +487,7 @@ public final class EditorPane2 extends AbstractPane
 
 		// Set up Summary TextArea to track text, caret, and selection actions.
 		cSummary = new TextArea();
-		cSummary.setMinSize(200, 0);
+		cSummary.setMinSize(150, 0);
 		cSummary.setPrefRowCount(10);
 		cSummary.setWrapText(true);
 
@@ -592,7 +592,7 @@ public final class EditorPane2 extends AbstractPane
 		lSummary.setPrefWidth(150);
 		cSummary.relocate(800, 270);
 		
-		cSummary.setMaxSize(120, 200);
+		cSummary.setMaxSize(80, 200);
 		cComments.setMaxSize(150, 200);
 
 		//Runtime grouping
