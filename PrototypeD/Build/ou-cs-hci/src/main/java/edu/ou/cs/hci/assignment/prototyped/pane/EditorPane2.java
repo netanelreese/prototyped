@@ -510,8 +510,8 @@ public final class EditorPane2 extends AbstractPane
 
 		// Example 1: Create and position a Label for the cTitle TextField
 		Label	lTitle = new Label("Title");
-		Label	lRating = new Label("Rating");
-		Label	lAwards = new Label("Award(s)");
+		Label	lRating = new Label("Rating:");
+		Label	lAwards = new Label("Award(s):");
 		Label	lReviews = new Label("Number of Reviews:");
 		Label	lDirector = new Label("Director:");
 		Label	lAge = new Label("Rating:");
@@ -530,7 +530,7 @@ public final class EditorPane2 extends AbstractPane
 		cTitle.setPrefWidth(251);
 
 		//Poster Image
-		
+		/**
 		BorderPane	hImageButton = new BorderPane(cImageButton);
 		BorderPane	hImageFile = new BorderPane(cImageFile);
 		HBox		pipick = new HBox(hImageFile, hImageButton);
@@ -541,20 +541,35 @@ public final class EditorPane2 extends AbstractPane
 		//hImageButton.setPadding(new Insets(4.0, 0.0, 0.0, 2.0));
 		pimage.setBorder(BORDER);
 		//poster.setPadding(PADDING);
+		 * 
+		 */
+		//Poster Grouping
+		cImageView.relocate(10, 10);
+		cImageView.setFitWidth(250);
+		cImageView.setFitHeight(360);
+		cImageFile.relocate(10, 380);
+		cImageFile.setMaxWidth(170);
+		cImageButton.relocate(180, 380);
 		
 		//grouping of rating, awards, number of reviews
 		lRating.relocate(300, 10);
-		cRating.relocate(300, 30);
-		lAwards.relocate(300, 50);
-		lReviews.relocate(300, 200);
+		cAverageReviewScore.relocate(300, 35);
+		lAwards.relocate(300, 70);
+		cAwardPicture.relocate(300, 100);
+		cAwardDirecting.relocate(300, 130);
+		cAwardCinematography.relocate(300, 160);
+		cAwardActing.relocate(300, 190);
+		lReviews.relocate(300, 220);
+		cNumberOfReviews.relocate(300 , 250);
 
 		//grouping of director, animated, color, rating and year
-		lDirector.relocate(500, 10);
-		cDirector.relocate(500, 30);
+		lDirector.relocate(480, 10);
+		cDirector.relocate(480, 30);
 		cDirector.setMaxWidth(150);
-		lAge.relocate(500, 100);
-		lYear.relocate(500, 200);
-		cYear.relocate(500, 220);
+		lAge.relocate(480, 100);
+		cRating.relocate(480, 120);
+		lYear.relocate(480, 200);
+		cYear.relocate(480, 220);
 
 		//Genre Grouping
 		lGenre.relocate(650, 100);
@@ -572,23 +587,27 @@ public final class EditorPane2 extends AbstractPane
 
 		//Grouping of comments and summary
 		lComments.relocate(800, 10);
+		cComments.relocate(800, 30);
 		lSummary.relocate(800, 250);
+		lSummary.setPrefWidth(150);
+		cSummary.relocate(800, 270);
+		
+		cSummary.setMaxSize(120, 200);
+		cComments.setMaxSize(150, 200);
 
 		//Runtime grouping
 		lRuntime.relocate(400, 350);
+		cRuntime.relocate(400, 370);
 
-
-		//Poster relocate
-		poster.relocate(0, 350);
 		
 		// Add all of the widgets, labels, decoration nodes, etc. to the pane
-		pane.getChildren().addAll(lTitle, cTitle, poster);
-		pane.getChildren().addAll(lRating, lAwards, lReviews);//rating award review group
-		pane.getChildren().addAll(lDirector, lAge, lYear, cYear, cDirector); //director, age rating, year groupnig
+		pane.getChildren().addAll(lTitle, cTitle, cImageView, cImageButton, cImageFile);
+		pane.getChildren().addAll(lRating, cAverageReviewScore, lAwards, cAwardPicture, cAwardDirecting, cAwardCinematography, cAwardActing, lReviews, cNumberOfReviews);//rating award review group
+		pane.getChildren().addAll(lDirector, lAge, cRating, lYear, cYear, cDirector); //director, age rating, year groupnig
 		pane.getChildren().addAll(lGenre); //genre grouping
 		pane.getChildren().addAll(cGenres);
-		pane.getChildren().addAll(lComments, lSummary); //comments and summary grouping
-		pane.getChildren().addAll(lRuntime); //runtime grouping
+		pane.getChildren().addAll(lComments, cComments, lSummary, cSummary); //comments and summary grouping
+		pane.getChildren().addAll(lRuntime, cRuntime); //runtime grouping
 
 		// Return the parent pane as the "root" of the EditorPane2 layout
 		return pane;
