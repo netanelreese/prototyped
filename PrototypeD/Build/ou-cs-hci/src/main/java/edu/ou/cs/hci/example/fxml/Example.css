@@ -1,0 +1,41 @@
+.root
+{
+	-fx-background-image: url("Background.jpg");
+}
+
+.label
+{
+	-fx-font-size: 14px;
+	-fx-font-weight: bold;
+	-fx-text-fill: #ffffe0;
+	-fx-effect: dropshadow(gaussian, rgba(192, 192, 192, 0.5), 0, 0, 0, 2);
+}
+
+.button
+{
+	-fx-text-fill: black;
+	-fx-font-family: "Arial Narrow";
+	-fx-font-weight: bold;
+	-fx-background-color: linear-gradient(#ffe0e0, #ffffe0);
+	-fx-effect: dropshadow(three-pass-box , rgba(0,0,0,0.6), 5, 0.0, 0, 2);
+}
+
+.button:hover
+{
+	-fx-background-color: linear-gradient(#ffffe0, #ffe0e0);
+}
+
+#welcome-text
+{
+   -fx-font-size: 32px;
+   -fx-font-family: "Arial Black";
+   -fx-fill: #ffffe0;
+   -fx-effect: innershadow(three-pass-box, rgba(192, 192, 192, 0.7), 6, 0.0, 0, 2);
+}
+
+#text-target
+{
+  -fx-fill: black;
+  -fx-font-weight: bold;
+  -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.5), 0, 0, 0, 2);
+}

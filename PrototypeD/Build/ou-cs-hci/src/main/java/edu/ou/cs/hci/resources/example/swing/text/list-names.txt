@@ -1,0 +1,7 @@
+address-card.png
+address-book.png
+birthday-cake.png
+align-justify.png
+baby-carriage.png
+bicycle.png
+bed.png

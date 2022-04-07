@@ -1,0 +1,5 @@
+Archive,archive.png
+Book,book.png
+Preview,binoculars.png
+Alignment,arrows-alt.png
+Cleanup,bath.png

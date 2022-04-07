@@ -1,0 +1,10 @@
+Action
+Comedy
+Documentary
+Drama
+Fantasy
+Horror
+Romance
+Sci-Fi
+Thriller
+Western

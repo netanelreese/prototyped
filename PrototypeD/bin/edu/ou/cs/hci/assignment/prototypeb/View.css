@@ -1,0 +1,107 @@
+/*------------------------------------------------------------------------------
+ * Copyright (C) 2019-2020 University of Oklahoma Board of Trustees.
+ *------------------------------------------------------------------------------
+ * Major Modification History:
+ *
+ * 20190220 [weaver]:	Original file.
+ * 20200212 [weaver]:	Updated for new PrototypeB in Spring 2020.
+ *
+ *------------------------------------------------------------------------------
+ *
+ * The JavaFX CSS Reference Guide is at
+ * docs.oracle.com/javase/8/javafx/api/javafx/scene/doc-files/cssref.html
+ *
+ * For color names, see
+ * https://www.w3schools.com/colors/colors_names.asp
+ *
+ *----------------------------------------------------------------------------*/
+
+/* --- Scene Root Node ------------------------------------------------------ */
+
+.root
+{
+	-fx-background-color: #fffff0;
+}
+
+/* --- ListView ------------------------------------------------------------- */
+
+/* List cells are black text on white background by default, except... */
+.list-cell
+{
+	-fx-background-color: white;
+	-fx-text-fill: black;
+}
+
+/* ...very pale blue (#f8f8ff) for odd rows */
+.list-cell:odd
+{
+	-fx-background-color: #f8f8ff;
+	-fx-text-fill: black;
+}
+
+/* ...black on lightgray (#d3d3d3) for selected items */
+.list-cell:filled:selected
+{
+	-fx-background-color: lightgray;
+	-fx-text-fill: black;
+}
+
+/* ...white on darkgray (#a9a9a9) for hovered items */
+.list-cell:filled:hover
+{
+	-fx-background-color: darkgray;
+	-fx-text-fill: white;
+}
+
+/* ...black on gray (#808080) for selected+hovered items */
+.list-cell:filled:selected:hover
+{
+	-fx-background-color: gray;
+	-fx-text-fill: white;
+}
+
+/* --- TableView ------------------------------------------------------------ */
+
+/* Table cells are black text on white background by default, except... */
+.table-row-cell
+{
+	-fx-background-color: white;
+	-fx-text-fill: black;
+}
+
+/* ...very pale blue (#f8f8ff) for odd rows */
+.table-row-cell:odd
+{
+	-fx-background-color: #f8f8ff;
+	-fx-text-fill: black;
+}
+
+/* ...black on lightgray (#d3d3d3) for selected items */
+.table-row-cell:filled:selected
+{
+	-fx-background-color: lightgray;
+	-fx-text-fill: black;
+}
+
+/* ...white on darkgray (#a9a9a9) for hovered items */
+.table-row-cell:filled:hover
+{
+	-fx-background-color: darkgray;
+	-fx-text-fill: white;
+}
+
+/* ...black on gray (#808080) for selected+hovered items */
+.table-row-cell:filled:selected:hover
+{
+	-fx-background-color: gray;
+	-fx-text-fill: white;
+}
+
+/* --- Media Pane ----------------------------------------------------------- */
+
+#media-pane
+{
+	-fx-background-color: #000000;
+}
+
+/*----------------------------------------------------------------------------*/
